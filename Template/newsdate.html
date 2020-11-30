@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %} newsdate {% endblock %}
+
+
+{% block content %}
+<h1>News for the year {{year}}</h1>
+<img src="{{News.Thumb.url}}"/>
+{% for news in article_list %}
+<h2>{{news.Author}}</h2>
+<h1>{{news.Title}}</h1>
+<p>{{news.Description}}</p>
+<h4>{{news.pub_date}}</h4>
+{% endfor%}
+
+
+{% endblock %}
